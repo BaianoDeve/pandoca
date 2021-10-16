@@ -1,24 +1,24 @@
 import React from 'react';
-import { SingIn } from '../screens/SingIn';
+import { Home } from '../screens/Home';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useTheme } from 'styled-components/native';
 
-const AuthStack = createNativeStackNavigator();
+const AppStack = createNativeStackNavigator();
 
-export const AuthRoutes = () => {
+export const AppRoutes = () => {
   const {
     colors: { bgColor },
   } = useTheme();
 
   return (
-    <AuthStack.Navigator
+    <AppStack.Navigator
       screenOptions={{
         headerShown: false,
         contentStyle: { backgroundColor: bgColor },
       }}
     >
-      <AuthStack.Screen name="SingIn" component={SingIn} />
-    </AuthStack.Navigator>
+      <AppStack.Screen name="Home" component={Home} />
+    </AppStack.Navigator>
   );
 };

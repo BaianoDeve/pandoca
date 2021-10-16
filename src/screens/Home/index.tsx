@@ -1,13 +1,27 @@
 import React from 'react';
 import * as S from './styles';
 
-import { Header } from '../../components/Header';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+
 import { RootStackScreenProps } from '../../@types/navigation';
+import { useAuth } from '../../contexts/AuthContext';
+import { Background } from '../../components/Background';
 
 export const Home = ({ navigation }: RootStackScreenProps<'Home'>) => {
+  const { singOut } = useAuth();
+
+  function handleSingOut() {
+    singOut();
+  }
+
   return (
-    <S.Container>
-      <S.Title>Home</S.Title>
-    </S.Container>
+    <Background>
+      <TouchableOpacity
+        style={{ justifyContent: 'center', alignItems: 'center' }}
+        onPress={handleSingOut}
+      >
+        <S.Title>Sair</S.Title>
+      </TouchableOpacity>
+    </Background>
   );
 };
