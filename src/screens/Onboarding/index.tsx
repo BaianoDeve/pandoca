@@ -5,9 +5,11 @@ import { useNavigation } from '@react-navigation/native';
 import * as S from './styles';
 
 import { slides } from '../../utils/onboardingSlide';
-import { OnboardingItem } from '../../components/OnboardingItem';
-import { Paginator } from '../../components/OnboardingPaginator';
-import { NextButton } from '../../components/OnboardingNextButton';
+import {
+  OnboardingItem,
+  NextButton,
+  Paginator,
+} from '../../components/Onboarding';
 
 type ViewableItemsChangedProps = {
   viewableItems: ViewToken[];
@@ -63,7 +65,13 @@ export const Onboarding = () => {
         scrollTo={scrollTo}
         percentage={(currentIndex + 1) * (100 / slides.length)}
       />
-			<S.Title></S.Title>
+      <S.SkipButton
+        onPress={() => {
+          navigate('SingIn');
+        }}
+      >
+        <S.SkipTitle>Pular</S.SkipTitle>
+      </S.SkipButton>
     </S.Container>
   );
 };

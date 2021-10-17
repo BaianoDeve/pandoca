@@ -38,13 +38,10 @@ const AuthProvider = ({ children }: ProviderProps) => {
         ['@PSAuth:user', '@PSAuth:token']
       );
 
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-
       if (storagedUser && storagedToken) {
         setUser(JSON.parse(storagedUser));
         setLoading(false);
       }
-
       setLoading(false);
     }
 

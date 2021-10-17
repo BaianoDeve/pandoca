@@ -22,6 +22,8 @@ export const AuthRoutes = () => {
     >
       <AuthStack.Screen name="Onboarding" component={Onboarding} />
       <AuthStack.Screen name="SingIn" component={SingIn} />
+      <AuthStack.Screen name="SingUp" component={SingIn} />
+      <AuthStack.Screen name="ForgotPassword" component={SingIn} />
     </AuthStack.Navigator>
   );
 };

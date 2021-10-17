@@ -3,7 +3,7 @@ import { useWindowDimensions } from 'react-native';
 import { SvgProps } from 'react-native-svg';
 import * as S from './styles';
 
-export type ItemProps = {
+export type OnboardingItemProps = {
   id: string;
   title: string;
   subtitle: string;
@@ -11,7 +11,7 @@ export type ItemProps = {
 };
 
 type Props = {
-  data: ItemProps;
+  data: OnboardingItemProps;
 };
 
 export const OnboardingItem = ({

@@ -1,17 +1,10 @@
 import React from 'react';
 import { Animated, useWindowDimensions } from 'react-native';
-import { SvgProps } from 'react-native-svg';
+import { OnboardingItemProps } from '../SlideItem';
 import * as S from './styles';
 
-export type ItemProps = {
-  id: string;
-  title: string;
-  subtitle: string;
-  image: React.FC<SvgProps>;
-};
-
 type Props = {
-  data: ItemProps[];
+  data: OnboardingItemProps[];
   scrollX: Animated.Value;
 };
 

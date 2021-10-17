@@ -77,7 +77,7 @@ export const NextButton = ({ percentage, scrollTo }: Props) => {
           />
         </G>
       </Svg>
-      <S.Button onPress={scrollTo}>
+      <S.Button onPress={scrollTo} activeOpacity={0.7}>
         <AntDesign name="arrowright" size={32} color="#fff" />
       </S.Button>
     </S.Container>
