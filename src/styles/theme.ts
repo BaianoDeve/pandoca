@@ -2,7 +2,7 @@ export const theme = {
   colors: {
     primary: '#F8941C',
     primaryHover: '#FF9F32',
-    primaryActive: '#DE8315',
+    primaryActive: '#9F490B',
 
     topic: '#FD951F',
     mention: '#4555E6',
